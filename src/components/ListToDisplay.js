@@ -6,9 +6,9 @@ import './ListToDisplay.css';
 const ListToDisplay = (props) => {
 
 
-    let listToDisplayJSX = props.userListMth.map((object, index) => {
+    let listToDisplayJSX = props.userListMth.map((user, index) => {
        
-        return <div key={index}>{object.name}<span onClick={props.deleteUserMth}>X</span></div>
+        return <div key={index} name={user.name}>{user.name}<span onClick={props.deleteUserMth}>X</span></div>
     })
 
     return (

@@ -26,9 +26,13 @@ const UsersList = () => {
 
 
 
-    const deleteUser = () => {
+    const deleteUser = (user) => {
 
-        setUserList(userList => [...userList])
+        let usersListAfterRemoval = [...userList]
+
+        usersListAfterRemoval.splice(user)
+
+        setUserList(usersListAfterRemoval)
     }
 
 
