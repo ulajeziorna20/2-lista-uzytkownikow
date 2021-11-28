@@ -6,7 +6,6 @@ import ListToDisplay from './ListToDisplay';
 
 const UsersList = () => {
 
-
     const [name, setName] = useState('')
     const [userList, setUserList] = useState([])
 
@@ -22,9 +21,11 @@ const UsersList = () => {
 
     const userListChange = () => {
 
-        let newUser = name
+        let currentUsersList = userList;
 
-        setUserList(userList.push(newUser))
+        currentUsersList.push(name)
+
+        setUserList(currentUsersList)
     }
 
 
