@@ -8,6 +8,8 @@ const UsersList = () => {
 
 
     const [name, setName] = useState('')
+    const [userList, setUserList] = useState([])
+
  
 
 
@@ -17,12 +19,21 @@ const UsersList = () => {
     }
 
 
+
+    const userListChange = () => {
+
+        let newUser = name
+
+        setUserList(userList.push(newUser))
+    }
+
+
     return (
         <div>
             <h1>User's List</h1>
             <EnterNameInput enterNewUserMth={enterNewUser}/>
-            <button>Add User</button>
-            <ListToDisplay />
+            <button onClick={userListChange}>Add User</button>
+            <ListToDisplay userListMth={userList}/>
         </div>
     )
 }
