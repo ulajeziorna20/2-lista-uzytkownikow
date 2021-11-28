@@ -21,11 +21,11 @@ const UsersList = () => {
 
     const userListChange = () => {
 
-        let currentUsersList = userList;
+        // let currentUsersList = userList;
 
-        currentUsersList.push(name)
+        // currentUsersList.push(name)
 
-        setUserList(currentUsersList)
+        setUserList(arr => [...arr, '${arr.length}'])
     }
 
 
