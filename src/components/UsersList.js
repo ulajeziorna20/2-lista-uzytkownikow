@@ -21,7 +21,14 @@ const UsersList = () => {
 
     const userListChange = () => {
 
-        setUserList(userList => [...userList, name])
+        setUserList(userList => [...userList, {name: name}])
+    }
+
+
+
+    const deleteUser = () => {
+
+        setUserList(userList => [...userList])
     }
 
 
@@ -30,7 +37,7 @@ const UsersList = () => {
             <h1>User's List</h1>
             <EnterNameInput enterNewUserMth={enterNewUser}/>
             <button onClick={userListChange}>Add User</button>
-            <ListToDisplay userListMth={userList}/>
+            <ListToDisplay userListMth={userList} deleteUserMth={deleteUser}/>
         </div>
     )
 }
