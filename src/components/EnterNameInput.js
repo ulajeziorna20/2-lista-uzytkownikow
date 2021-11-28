@@ -9,7 +9,7 @@ const EnterNameInput = (props) => {
 
     return (
         <span>
-            <input type="text" name="name" id="enter-name" />
+            <input type="text" name="name" id="enter-name" onChange={props.enterNewUserMth}/>
         </span>
     )
 }
