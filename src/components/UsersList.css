@@ -3,7 +3,6 @@ h1 {
     color: darkblue;
 }
 
-
 input {
     width: 200px;
     height: 40px;
@@ -15,7 +14,6 @@ input {
     color: rgb(61, 60, 60);
 }
 
-
 button {
     width: 80px;
     height: 42px;
@@ -23,10 +21,8 @@ button {
     background-color: #0066ff;
     border: #0066ff;
     color: white;
-
 }
 
 button:hover {
     background-color: #003399;
 }
-

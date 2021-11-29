@@ -9,41 +9,26 @@ const UsersList = () => {
     const [userList, setUserList] = useState([])
 
 
-
-
-
     const enterNewUser = (e) => {
-
         setName(e.target.value)
     }
 
 
     const userListChange = () => {
-
         setUserList(userList => [...userList, { name: name, key: Date.now() }])
         setName('');
-
     }
 
 
-
-
-
-
-
     const deleteUser = (id) => {
-        console.log(id);
 
         let filteredUsers = userList.filter((user) => {
 
             if (user.key !== id)
-
                 return true
-
         })
 
         setUserList(filteredUsers)
-
     }
 
 
