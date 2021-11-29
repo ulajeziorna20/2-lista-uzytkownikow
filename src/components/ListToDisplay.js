@@ -11,7 +11,7 @@ const ListToDisplay = (props) => {
         // console.log(user);
 
         return (
-            <div class="user-element">
+            <div className="user-element">
                 <p key={user.key} id="user-item">
                     {user.name}
                 </p>

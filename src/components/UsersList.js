@@ -20,11 +20,9 @@ const UsersList = () => {
 
     const userListChange = () => {
 
-        return (
-            setUserList(userList => [...userList, { name: name, key: Date.now() }])
-        ).then(() => {
-            setName('');
-        })
+        setUserList(userList => [...userList, { name: name, key: Date.now() }])
+        setName('');
+
     }
 
 
