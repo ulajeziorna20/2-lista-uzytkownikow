@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './UsersList.css';
 import ListToDisplay from './ListToDisplay';
 
@@ -18,11 +18,18 @@ const UsersList = () => {
     }
 
 
-
     const userListChange = () => {
 
-        setUserList(userList => [...userList, { name: name, key: Date.now() }])
+        return (
+            setUserList(userList => [...userList, { name: name, key: Date.now() }])
+        ).then(() => {
+            setName('');
+        })
     }
+
+
+
+
 
 
 
