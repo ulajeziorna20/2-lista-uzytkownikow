@@ -27,9 +27,17 @@ const UsersList = () => {
 
 
 
-    const deleteUser = (user) => {
+    const deleteUser = (e) => {
 
-      console.log(user);
+        console.log(e);
+        console.log(e.target.id);
+        console.log(e.target.name);
+    // let filterUser = userList.filter((user) => {
+        
+    //     if (user.id !== ) {
+
+    //     }
+    // })
 
     }
 

@@ -11,6 +11,8 @@ const ListToDisplay = (props) => {
         return <div key={Date.now() + index} name={user.name}>{user.name}<span onClick={props.deleteUserMth}>X</span></div>
     })
 
+    console.log(listToDisplayJSX);
+
     return (
         <div>
             {listToDisplayJSX}
