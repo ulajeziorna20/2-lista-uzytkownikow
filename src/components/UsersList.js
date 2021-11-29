@@ -8,9 +8,9 @@ const UsersList = () => {
 
     const [name, setName] = useState('')
     const [userList, setUserList] = useState([])
-  
 
- 
+
+
 
 
     const enterNewUser = (e) => {
@@ -22,22 +22,23 @@ const UsersList = () => {
 
     const userListChange = () => {
 
-        setUserList(userList => [...userList, {name: name, key: Date.now()}])
+        setUserList(userList => [...userList, { name: name, key: Date.now() }])
     }
 
 
 
     const deleteUser = (id) => {
-
-
         console.log(id);
 
-    // let filterUser = userList.filter((user) => {
-        
-    //     if (user.id !== ) {
+        let filteredUsers = userList.filter((user) => {
 
-    //     }
-    // })
+            if (user.key !== id) 
+
+            return true
+            
+        })
+
+        setUserList(filteredUsers)
 
     }
 
@@ -45,9 +46,9 @@ const UsersList = () => {
     return (
         <div>
             <h1>User's List</h1>
-            <EnterNameInput enterNewUserMth={enterNewUser}/>
+            <EnterNameInput enterNewUserMth={enterNewUser} />
             <button onClick={userListChange}>Add User</button>
-            <ListToDisplay userList={userList} deleteUserMth={deleteUser}/>
+            <ListToDisplay userList={userList} deleteUserMth={deleteUser} />
         </div>
     )
 }

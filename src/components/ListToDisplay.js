@@ -17,7 +17,7 @@ const ListToDisplay = (props) => {
         )
     })
 
-    console.log(listToDisplayJSX);
+    // console.log(listToDisplayJSX);
 
     return (
         <div>
