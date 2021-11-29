@@ -22,16 +22,16 @@ const UsersList = () => {
 
     const userListChange = () => {
 
-        setUserList(userList => [...userList, {name: name}])
+        setUserList(userList => [...userList, {name: name, key: Date.now()}])
     }
 
 
 
-    const deleteUser = (e) => {
+    const deleteUser = (id) => {
 
-        console.log(e);
-        console.log(e.target.id);
-        console.log(e.target.name);
+
+        console.log(id);
+
     // let filterUser = userList.filter((user) => {
         
     //     if (user.id !== ) {
@@ -47,7 +47,7 @@ const UsersList = () => {
             <h1>User's List</h1>
             <EnterNameInput enterNewUserMth={enterNewUser}/>
             <button onClick={userListChange}>Add User</button>
-            <ListToDisplay userListMth={userList} deleteUserMth={deleteUser}/>
+            <ListToDisplay userList={userList} deleteUserMth={deleteUser}/>
         </div>
     )
 }
