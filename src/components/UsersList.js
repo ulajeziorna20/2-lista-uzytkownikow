@@ -8,6 +8,7 @@ const UsersList = () => {
 
     const [name, setName] = useState('')
     const [userList, setUserList] = useState([])
+  
 
  
 
@@ -28,11 +29,8 @@ const UsersList = () => {
 
     const deleteUser = (user) => {
 
-        let usersListAfterRemoval = [...userList]
+      console.log(user);
 
-        usersListAfterRemoval.splice(user)
-
-        setUserList(usersListAfterRemoval)
     }
 
 
