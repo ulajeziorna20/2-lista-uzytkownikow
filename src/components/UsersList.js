@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import './UsersList.css';
-import EnterNameInput from './EnterNameInput';
 import ListToDisplay from './ListToDisplay';
 
 
@@ -32,10 +31,10 @@ const UsersList = () => {
 
         let filteredUsers = userList.filter((user) => {
 
-            if (user.key !== id) 
+            if (user.key !== id)
 
-            return true
-            
+                return true
+
         })
 
         setUserList(filteredUsers)
@@ -46,8 +45,12 @@ const UsersList = () => {
     return (
         <div>
             <h1>User's List</h1>
-            <EnterNameInput enterNewUserMth={enterNewUser} />
-            <button onClick={userListChange}>Add User</button>
+            <div>
+                <span>
+                    <input type="text" name="name" id="enter-name" placeholder="Enter name" onChange={enterNewUser} />
+                </span>
+                <button onClick={userListChange}>Add User</button>
+            </div>
             <ListToDisplay userList={userList} deleteUserMth={deleteUser} />
         </div>
     )

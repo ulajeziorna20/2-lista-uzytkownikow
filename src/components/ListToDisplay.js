@@ -11,8 +11,11 @@ const ListToDisplay = (props) => {
         // console.log(user);
 
         return (
-            <div key={user.key}>
-                {user.name}<span onClick={() => props.deleteUserMth(user.key)}>X</span>
+            <div>
+                <p key={user.key} id="user-item">
+                    {user.name}
+                </p>
+                <span id="x-button" onClick={() => props.deleteUserMth(user.key)}>X</span>
             </div>
         )
     })
