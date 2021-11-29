@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import './UsersList.css';
 import ListToDisplay from './ListToDisplay';
 
@@ -52,7 +52,7 @@ const UsersList = () => {
             <h1>User's List</h1>
             <div>
                 <span>
-                    <input type="text" name="name" id="enter-name" placeholder="Enter name" onChange={enterNewUser} />
+                    <input type="text" name="name" id="enter-name" placeholder="Enter name" onChange={enterNewUser} value={name} />
                 </span>
                 <button onClick={userListChange}>Add User</button>
             </div>
