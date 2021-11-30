@@ -27,10 +27,10 @@ const UsersList = () => {
 	}
 
 	return (
-		<div>
-			<h1>User's List</h1>
+		<section id="main-container">
+			<h1 id="main-header">User's List</h1>
 			<div>
-				<span>
+				<span id="input-text">
 					<input
 						type="text"
 						name="name"
@@ -40,10 +40,16 @@ const UsersList = () => {
 						value={name}
 					/>
 				</span>
-				<button onClick={userListChange}>Add User</button>
+				<button id="add-user-btn" onClick={userListChange}>
+					Add User
+				</button>
 			</div>
-			<ListToDisplay userList={userList} deleteUserMth={deleteUser} />
-		</div>
+			<div>
+				<ul className="user-list">
+					<ListToDisplay userList={userList} deleteUserMth={deleteUser} />
+				</ul>
+			</div>
+		</section>
 	)
 }
 

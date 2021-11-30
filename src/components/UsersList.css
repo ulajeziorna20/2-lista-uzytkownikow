@@ -26,3 +26,8 @@ button {
 button:hover {
 	background-color: #003399;
 }
+
+.user-list {
+	width: 350px;
+	height: auto;
+}
