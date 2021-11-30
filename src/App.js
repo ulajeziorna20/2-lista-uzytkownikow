@@ -1,14 +1,14 @@
-import './App.css';
-import UsersList from './components/UsersList';
+import './App.css'
+import UsersList from './components/UsersList'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <UsersList />
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<header className="App-header">
+				<UsersList />
+			</header>
+		</div>
+	)
 }
 
-export default App;
+export default App

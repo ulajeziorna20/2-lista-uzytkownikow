@@ -1,29 +1,19 @@
-import React from "react";
-import './ListToDisplay.css';
-
-
+import React from 'react'
+import './ListToDisplay.css'
 
 const ListToDisplay = (props) => {
+	let listToDisplayJSX = props.userList.map((user) => {
+		return (
+			<ul className="user-element" key={user.key}>
+				<li id="user-item">{user.name}</li>
+				<span className="x-button" onClick={() => props.deleteUserMth(user.key)}>
+					X
+				</span>
+			</ul>
+		)
+	})
 
-    let listToDisplayJSX = props.userList.map((user) => {
-
-        return (
-            <div className="user-element">
-                <div key={user.key} id="user-item">
-                    {user.name}
-                </div>
-                <span id="x-button" onClick={() => props.deleteUserMth(user.key)}>X</span>
-            </div>
-        )
-    })
-
-
-    return (
-        <div>
-            {listToDisplayJSX}
-        </div>
-    )
+	return <div>{listToDisplayJSX}</div>
 }
 
-export default ListToDisplay;
-
+export default ListToDisplay
