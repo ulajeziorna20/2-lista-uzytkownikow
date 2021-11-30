@@ -4,16 +4,16 @@ import './ListToDisplay.css'
 const ListToDisplay = (props) => {
 	let listToDisplayJSX = props.userList.map((user) => {
 		return (
-			<div className="list-element" key={user.key}>
-				<li id="user-item">{user.name}</li>
+			<li id="user-item" key={user.key} className="list-element">
+				{user.name}
 				<span className="x-button" onClick={() => props.deleteUserMth(user.key)}>
 					X
 				</span>
-			</div>
+			</li>
 		)
 	})
 
-	return <div>{listToDisplayJSX}</div>
+	return <ul className="user-list">{listToDisplayJSX} </ul>
 }
 
 export default ListToDisplay

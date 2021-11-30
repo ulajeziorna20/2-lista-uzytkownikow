@@ -43,11 +43,8 @@ const UsersList = () => {
 				<button id="add-user-btn" onClick={userListChange}>
 					Add User
 				</button>
-			</div>
-			<div>
-				<ul className="user-list">
-					<ListToDisplay userList={userList} deleteUserMth={deleteUser} />
-				</ul>
+
+				<ListToDisplay userList={userList} deleteUserMth={deleteUser} />
 			</div>
 		</section>
 	)
