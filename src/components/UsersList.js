@@ -37,6 +37,11 @@ const UsersList = () => {
 						id="enter-name"
 						placeholder="Enter name"
 						onChange={enterNewUser}
+						onKeyPress={(event) => {
+							if (event.key === "Enter") {
+								userListChange()
+							}
+						}}
 						value={name}
 					/>
 				</span>
